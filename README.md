@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- Badges: replace <your-username> and <your-repo> with your GitHub handle and repo name -->
+  <!-- Badges: replace <Lewis502> and <linkedin-text-formatter> with your GitHub handle and repo name -->
   <a href="https://<your-username>.github.io/<your-repo>/">
     <img alt="GitHub Pages" src="https://img.shields.io/badge/GitHub%20Pages-live-brightgreen">
   </a>
