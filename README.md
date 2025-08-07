@@ -6,7 +6,8 @@
 
 <p align="center">
   <!-- Badges: replace <Lewis502> and <linkedin-text-formatter> with your GitHub handle and repo name -->
-  <a href="https://<your-username>.github.io/<your-repo>/">
+  <a href="https://lewis502.github.io/linkedin-text-formatter/">
+    
     <img alt="GitHub Pages" src="https://img.shields.io/badge/GitHub%20Pages-live-brightgreen">
   </a>
   <img alt="License" src="https://img.shields.io/badge/License-MIT-blue.svg">
@@ -24,7 +25,7 @@
 
 ## Live demo
 
-**https://<your-username>.github.io/<your-repo>/**  
+**https://lewis502.github.io/linkedin-text-formatter/**  
 *(Enable GitHub Pages: Settings → Pages → “Deploy from a branch”, Branch: `main`, Folder: `/`)*
 
 ## What this does
