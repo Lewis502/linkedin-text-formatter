@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LinkedIn Text Formatter</title>
+  <meta name="description" content="Write, style, and copy Unicode-formatted text that pastes cleanly into LinkedIn posts." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header" role="banner">
+    <h1 class="brand">LinkedIn Text Formatter</h1>
+    <p class="tagline">Write → Format → Copy → Paste into LinkedIn</p>
+  </header>
+
+  <main class="layout" role="main">
+    <section class="panel" aria-labelledby="editor-title">
+      <div class="panel-header">
+        <h2 id="editor-title">Editor</h2>
+        <div class="toolbar" role="toolbar" aria-label="Formatting toolbar">
+          <button id="boldBtn" class="tool" title="Bold (Ctrl/⌘+B)" aria-label="Bold">B</button>
+          <button id="italicBtn" class="tool" title="Italic (Ctrl/⌘+I)" aria-label="Italic"><i>I</i></button>
+          <button id="boldItalicBtn" class="tool" title="Bold Italic" aria-label="Bold Italic"><b><i>BI</i></b></button>
+          <span class="sep" aria-hidden="true"></span>
+          <button id="underlineBtn" class="tool" title="Underline" aria-label="Underline"><u>U</u></button>
+          <button id="strikeBtn" class="tool" title="Strikethrough" aria-label="Strikethrough"><s>S</s></button>
+          <span class="sep" aria-hidden="true"></span>
+          <button id="bulletsBtn" class="tool" title="Bullets" aria-label="Bullets">•</button>
+          <button id="quotesBtn" class="tool" title="Quote selection" aria-label="Quote">“”</button>
+          <span class="sep" aria-hidden="true"></span>
+          <button id="normalizeSelBtn" class="tool" title="Normalize selection to plain text" aria-label="Normalize selection">↩︎</button>
+        </div>
+      </div>
+
+      <textarea id="editor" class="editor" placeholder="Write your LinkedIn post here… Use the toolbar to style selections, or turn on 'Parse Markdown' below for **bold**, *italic*, __underline__, and ~~strikethrough~~." aria-label="Post editor"></textarea>
+
+      <div class="options">
+        <label><input type="checkbox" id="parseMd"> Parse mini‑Markdown on copy (**bold**, *italic*, __underline__, ~~strike~~)</label>
+      </div>
+
+      <div class="meta">
+        <div><strong>Characters:</strong> <span id="charCount">0</span> / <span id="charLimit">3000</span></div>
+        <div><strong>Fancy %:</strong> <span id="fancyPercent">0</span>% &nbsp; | &nbsp; <strong>Combining marks:</strong> <span id="combiningCount">0</span></div>
+      </div>
+
+      <div class="actions">
+        <button id="copyBtn" class="primary">Copy formatted</button>
+        <button id="normalizeBtn">Normalize all</button>
+        <button id="clearBtn" class="ghost">Clear</button>
+        <span id="copyStatus" role="status" aria-live="polite"></span>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="preview-title">
+      <div class="panel-header">
+        <h2 id="preview-title">Preview (what you’ll paste)</h2>
+      </div>
+      <div id="preview" class="preview" aria-live="polite"></div>
+      <details class="help">
+        <summary>Why does this work?</summary>
+        <p>LinkedIn posts strip HTML, but keep plain text. The bold/italic styles here are actually <em>Unicode characters</em> from the “Mathematical Alphanumeric Symbols” block, plus combining marks for underline/strike. They survive copy‑paste because they’re text.</p>
+        <p>Tip: use styling sparingly for accessibility and readability.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="app-footer" role="contentinfo">
+    <p>Built for learning &amp; sharing. <a href="https://github.com/" target="_blank" rel="noreferrer">Host on GitHub Pages</a>.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
